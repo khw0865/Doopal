@@ -1,0 +1,16 @@
+mediapipe_palm_3d_action_server:
+  ros__parameters:
+    show_window: false
+    base_frame: base_link
+    calibration_frame: link_6
+    smoothing_alpha: 0.35
+    stable_frames: 5
+
+realsense_hand_image_servo_follow_service:
+  ros__parameters:
+    base_frame: base_link
+    calibration_frame: link_6
+    position_filter_alpha: 0.55
+    target_depth_mm: 230.0
+    max_forward_speed_mm_s: 500.0
+    max_total_speed_mm_s: 500.0

@@ -1,0 +1,20 @@
+테스트 해보고싶은거
+	scanning 모션 중에 객체 인식 테스트
+	
+	
+정면 정렬 방밥
+	
+	손에 두는거나, 물체를 집을때 필요할듯?
+	
+python3 realsense_hand_speedl_follow_clean.py   --ros-args   -p max_approach_speed_mm_s:=150.0   -p max_retreat_speed_mm_s:=100.0   -p linear_acc_mm_s2:=500.0   -p kp:=0.7   -p position_filter_alpha:=0.4   -p max_hand_jump_mm:=1200.0
+
+
+db = nosql (Redis)
+
+대시보드 구성
+	로그내역
+	db 조회창
+	작업반경(강민's dream)
+	
+
+

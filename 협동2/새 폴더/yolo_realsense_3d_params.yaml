@@ -1,0 +1,35 @@
+yolo_realsense_3d:
+  ros__parameters:
+    # 실제 best.pt 절대 경로로 변경
+    model_path: /home/rokey/best.pt
+
+    confidence: 0.50
+    iou: 0.45
+    imgsz: 640
+    device: ""              # ""=자동, "cpu", "0" 등
+    inference_rate_hz: 10.0
+
+    # 비워두면 모든 클래스가 후보
+    # 예: toothbrush, bottle, cup
+    target_class: ""
+    target_class_id: -1
+    target_policy: highest_confidence  # highest_confidence | nearest | largest
+
+    color_topic: /camera/camera/color/image_raw
+    depth_topic: /camera/camera/aligned_depth_to_color/image_raw
+    camera_info_topic: /camera/camera/color/camera_info
+
+    base_frame: base_link
+    camera_frame: ""         # 비우면 CameraInfo/Image frame_id 자동 사용
+
+    sync_queue_size: 10
+    sync_slop_sec: 0.08
+    tf_timeout_sec: 0.20
+
+    depth_roi_ratio: 0.30
+    min_depth_m: 0.15
+    max_depth_m: 2.00
+    min_valid_depth_pixels: 10
+
+    show_window: true
+    window_name: YOLO RealSense 3D

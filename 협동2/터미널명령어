@@ -1,0 +1,28 @@
+ros2 run tf2_ros static_transform_publisher \
+  --x 0.0 \
+  --y 0.0 \
+  --z 0.250 \
+  --roll 0.0 \
+  --pitch 0.0 \
+  --yaw 0.0 \
+  --frame-id link_6 \
+  --child-frame-id gripper_tcp
+
+
+
+
+python3 realsense_hand_speedl_follow_clean.py \
+  --ros-args \
+  -p max_approach_speed_mm_s:=400.0 \
+  -p max_retreat_speed_mm_s:=300.0 \
+  -p kp:=0.8 \
+  -p linear_acc_mm_s2:=1000.0 \
+  -p position_filter_alpha:=0.55 \
+  -p max_hand_jump_mm:=300.0
+  
+  
+ros2 service call /dsr01/system/set_robot_mode dsr_msgs2/srv/SetRobotMode "{robot_mode: 0}"
+
+
+./start_ui_db.sh
+./stop_ui_db.sh

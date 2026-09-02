@@ -1,0 +1,10 @@
+
+ui_db 실행법
+
+cd Desktop/assistive_robot_integrated_update/ui_db/
+./start_ui_db.sh
+
+
+
+ui_db 종료법
+./stop_ui_db.sh

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>두팔이</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body class="user-page">
+  <main class="assistant-shell">
+    <header><span class="status-dot" id="statusDot"></span><strong id="stateText">IDLE</strong><a href="/admin/login">관리자</a></header>
+    <section class="character-card">
+      <div class="robot-face" id="robotFace"><div class="eye"></div><div class="eye"></div></div>
+      <p class="main-message" id="mainMessage">도움이 필요하시면 말씀해 주세요.</p>
+    </section>
+    <section class="dialog-card">
+      <div><span>사용자</span><p id="userText">아직 인식된 문장이 없습니다.</p></div>
+      <div><span>두팔이</span><p id="assistantText">대기 중입니다.</p></div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/user.js') }}"></script>
+</body>
+</html>

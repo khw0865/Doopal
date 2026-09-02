@@ -1,0 +1,9 @@
+robot_control
+	action - find_hand_order (처음에 손 스캔)
+	trigger - arrived_goal (실시간 손 트래킹 시작신호)
+	
+db
+	내보내기 : only 강민
+	쓰기 : yolo, mediapipe, vla(gui)
+	
+

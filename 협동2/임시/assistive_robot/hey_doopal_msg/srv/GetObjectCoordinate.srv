@@ -1,0 +1,19 @@
+# DB/Redis에 저장된 객체 좌표 조회
+# robot control node -> Redis bridge
+
+string object_name
+---
+bool success
+bool has_coordinate
+
+# base_link 기준 좌표 [x, y, z]
+# Python 클라이언트에서는 list(response.coordinate)로 바로 사용
+float64[3] coordinate
+
+# 정상 응답은 mm
+string coordinate_unit
+string frame_id
+
+# 원본 레코드 확인용 JSON
+string json_data
+string message
